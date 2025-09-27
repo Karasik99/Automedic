@@ -22,14 +22,17 @@ h1,h2,h3,h4,h5{
     padding: 0;
 }
 
+body{
+    overflow-x: hidden;
 
+}
 
 .header{
     background-image:linear-gradient(to right, #000, #00000029), url('https://cdn.prod.website-files.com/6226481a3123521a0f08ac50/622681368f85801adf945ff9_home-hero-bg-image-autocar-webflow-ecommerce-template.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 70% 100%, 65% 90%, 0 90%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 70% 100%, 67% 93%, 0 93%);
 
 
     &__wrapper{
@@ -139,4 +142,169 @@ h1,h2,h3,h4,h5{
     &__button:hover{
         transform: translateY(-.7rem);
     }
+}
+
+.services{
+
+    background-color: white;
+
+    &__wrapper{
+        max-width: 1320px;
+        margin: auto;
+        position: relative;
+    }
+
+    &__info{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 7rem;
+    }
+    
+    &__info-block{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: .5rem;
+    }
+
+    &__info-number{
+        letter-spacing: .04em;
+        text-transform: uppercase;
+        font-size: 5rem;
+        color: #000;
+        font-style: italic;
+        font-weight: 900;
+        line-height: 1.125em;
+    }
+
+    &__info-number span{
+        letter-spacing: .04em;
+        text-transform: uppercase;
+        font-size: 5rem;
+        font-style: italic;
+        font-weight: 900;
+        line-height: 1.125em;
+        color: red;
+    }
+
+    &__info-comment{
+        letter-spacing: .02em;
+        text-transform: uppercase;
+        font-size: 22px;
+        font-weight: 900;
+        line-height: 1.273em;
+        color: #000;
+    }
+
+    &__content{
+        padding-top: 10rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        position: relative;
+        padding-bottom: 3rem;
+
+    }
+
+    &__suptitle hr{
+        border-color: red;
+        
+    }
+
+    &__suptitle-name{
+        color: red;
+    }
+
+    &__title{
+        letter-spacing: .05em;
+        text-transform: uppercase;
+        font-size: 54px;
+        font-style: italic;
+        font-weight: 900;
+        line-height: 1.204em;
+        color: #000;
+        max-width: 48rem;
+    }
+
+    &__subtitle{
+        position: absolute;
+        right: -25%;
+        letter-spacing: .04em;
+        text-transform: uppercase;
+        font-size: 7rem;
+        font-style: italic;
+        font-weight: 900;
+        line-height: 1.125em;
+        color: white;
+        background-color: white;
+        text-shadow: -1px -1px 0 #959494, 1px -1px 0 #959494, -1px 1px 0 #959494, 1px 1px 0 #959494;
+    }
+
+    &__slader{
+        overflow-x: hidden;
+        position: absolute;
+        display: flex;
+        gap: 2rem;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 3rem;
+    }
+
+    &__slader-slade{
+        width: 400px;
+        height: 500px;
+        background-image: url('https://cdn.prod.website-files.com/6226481a3123521a0f08ac50/62279b9e00a1e76042ae831d_wheels-service-image-autocar-webflow-ecommerce-template.jpg');
+        padding: 3rem;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        gap: 1rem;
+    }
+
+    &__slader-slade-title{
+        letter-spacing: .05em;
+        text-transform: uppercase;
+        font-size: 1.5rem;
+        font-style: italic;
+        font-weight: 900;
+        line-height: 1.429em;
+    }
+
+    &__slader-slade-text{
+        letter-spacing: .05em;
+        text-transform: uppercase;
+        font-size: 1rem;
+        font-style: italic;
+        font-weight: 600;
+        line-height: 1.429em;
+    }
+
+    &__button{
+        margin-top: 35rem;
+        margin-bottom: 4rem;
+            border: 2.5px solid red;
+            background-color: red;
+            text-align: center;
+            letter-spacing: .06em;
+            text-transform: uppercase;
+            transform-style: preserve-3d;
+            justify-content: center;
+            padding: 2rem 8rem;
+            font-style: italic;
+            font-weight: 900;
+            line-height: 1.111em;
+            text-decoration: none;
+            cursor: pointer;
+            transition: border-color .3s, background-color .3s, transform .3s, color .3s;
+        }
+    
+        &__button:hover{
+            transform: translateY(-.7rem);
+        }
 }

@@ -287,7 +287,7 @@ body{
 
     &__button{
         margin-top: 35rem;
-        margin-bottom: 4rem;
+        margin-bottom: 10rem;
             border: 2.5px solid red;
             background-color: red;
             text-align: center;
@@ -307,4 +307,201 @@ body{
         &__button:hover{
             transform: translateY(-.7rem);
         }
+}
+
+
+.whyus{
+    background-color: black;
+    padding: 15rem 0;
+
+
+    &__wrapper{
+        max-width: 1320px;
+        margin: auto;
+        position: relative;
+    }
+
+    &__content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5rem;
+    }
+
+    &__info{
+        position: relative;
+        height: -webkit-fill-available;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    &__background{
+        position: absolute;
+        opacity: .3;
+        top: -17%;
+        right: -10%;
+        letter-spacing: .04em;
+        text-transform: uppercase;
+        font-size: 9rem;
+        font-style: italic;
+        font-weight: 900;
+        line-height: 1.125em;
+        color: black;
+        text-shadow: -1px -1px 0 #959494, 1px -1px 0 #959494, -1px 1px 0 #959494, 1px 1px 0 #959494;
+    }
+
+    &__container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    &__container hr{
+        width: 10rem;
+    }
+
+    &__infocontainer{
+        display: flex;
+        gap: 1rem;
+    }
+
+    &__suptitle{
+        letter-spacing: .05em;
+        text-transform: uppercase;
+        font-size: 1.7rem;
+        font-style: italic;
+        font-weight: 900;
+        line-height: 1.204em;
+    }
+
+    &__infocontainer-icon{
+        width: 4rem;
+    }
+
+    &__title{
+        letter-spacing: .05em;
+        text-transform: uppercase;
+        font-size: 3.3rem;
+        font-style: italic;
+        font-weight: 900;
+        line-height: 1.204em;
+    }
+
+    &__subtitle{
+        font-size: 1.5rem;
+        font-weight: 400;
+        line-height: 1.667em;
+        max-width: 45rem;
+    }
+
+    &__img{
+        max-width: 40rem;
+    }
+
+    &__infocontainer-title{
+        letter-spacing: .05em;
+        text-transform: uppercase;
+        font-size: 1.5rem;
+        font-style: italic;
+        font-weight: 900;
+        line-height: 1.204em;
+    }
+
+    &__infocontainer-text{
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.667em;
+        max-width: 45rem;
+    }
+
+    &__button{
+        border: 2.5px solid red;
+        background-color: red;
+        text-align: center;
+        letter-spacing: .06em;
+        text-transform: uppercase;
+        transform-style: preserve-3d;
+        justify-content: center;
+        padding: 2rem 4rem;
+        font-style: italic;
+        font-weight: 900;
+        line-height: 1.111em;
+        text-decoration: none;
+        cursor: pointer;
+        transition: border-color .3s, background-color .3s, transform .3s, color .3s;
+    }
+
+    &__button:hover{
+        transform: translateY(-.7rem);
+    }
+
+}
+
+.about{
+    background-color: white;
+
+    &__info{
+        justify-content: center;
+    }
+
+    &__background{
+        right: 65%;
+        top: -5%;
+        color: white;
+    }
+
+    &__container hr{
+        border-color: red;
+    }
+
+    &__suptitle{
+        color: red;
+    }
+
+    &__title{
+        color: #000;
+    }
+
+    &__subtitle{
+        color: #959494;
+    }
+
+    &__button{
+        background-color: transparent;
+        border-color: black;
+        color: #000;
+    }
+}
+
+.visitus{
+    padding: 10rem 0;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 20% 100%, 18% 88%, 0 88%);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: linear-gradient(to right, #00000029, #000000c2 56%, #000000db), url("https://cdn.prod.website-files.com/6226481a3123521a0f08ac50/6227dff91457fc6fe16c1d76_cta-bg-image-autocar-webflow-ecommerce-template.jpg");
+
+    &__title{
+        color: white;
+    }
+
+    &__button{
+        background-color: red;
+        color: white;
+    }
+
+
+
+
+
+
+}
+
+
+.locations{
+    height: 100vh;
 }

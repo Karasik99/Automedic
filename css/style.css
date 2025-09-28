@@ -255,7 +255,7 @@ body {
 }
 .services__button {
   margin-top: 35rem;
-  margin-bottom: 4rem;
+  margin-bottom: 10rem;
   border: 2.5px solid red;
   background-color: red;
   text-align: center;
@@ -273,4 +273,166 @@ body {
 }
 .services__button:hover {
   transform: translateY(-0.7rem);
+}
+
+.whyus {
+  background-color: black;
+  padding: 15rem 0;
+}
+.whyus__wrapper {
+  max-width: 1320px;
+  margin: auto;
+  position: relative;
+}
+.whyus__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+}
+.whyus__info {
+  position: relative;
+  height: -webkit-fill-available;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.whyus__background {
+  position: absolute;
+  opacity: 0.3;
+  top: -17%;
+  right: -10%;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-size: 9rem;
+  font-style: italic;
+  font-weight: 900;
+  line-height: 1.125em;
+  color: black;
+  text-shadow: -1px -1px 0 #959494, 1px -1px 0 #959494, -1px 1px 0 #959494, 1px 1px 0 #959494;
+}
+.whyus__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.whyus__container hr {
+  width: 10rem;
+}
+.whyus__infocontainer {
+  display: flex;
+  gap: 1rem;
+}
+.whyus__suptitle {
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: 1.7rem;
+  font-style: italic;
+  font-weight: 900;
+  line-height: 1.204em;
+}
+.whyus__infocontainer-icon {
+  width: 4rem;
+}
+.whyus__title {
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: 3.3rem;
+  font-style: italic;
+  font-weight: 900;
+  line-height: 1.204em;
+}
+.whyus__subtitle {
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.667em;
+  max-width: 45rem;
+}
+.whyus__img {
+  max-width: 40rem;
+}
+.whyus__infocontainer-title {
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-style: italic;
+  font-weight: 900;
+  line-height: 1.204em;
+}
+.whyus__infocontainer-text {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.667em;
+  max-width: 45rem;
+}
+.whyus__button {
+  border: 2.5px solid red;
+  background-color: red;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  transform-style: preserve-3d;
+  justify-content: center;
+  padding: 2rem 4rem;
+  font-style: italic;
+  font-weight: 900;
+  line-height: 1.111em;
+  text-decoration: none;
+  cursor: pointer;
+  transition: border-color 0.3s, background-color 0.3s, transform 0.3s, color 0.3s;
+}
+.whyus__button:hover {
+  transform: translateY(-0.7rem);
+}
+
+.about {
+  background-color: white;
+}
+.about__info {
+  justify-content: center;
+}
+.about__background {
+  right: 65%;
+  top: -5%;
+  color: white;
+}
+.about__container hr {
+  border-color: red;
+}
+.about__suptitle {
+  color: red;
+}
+.about__title {
+  color: #000;
+}
+.about__subtitle {
+  color: #959494;
+}
+.about__button {
+  background-color: transparent;
+  border-color: black;
+  color: #000;
+}
+
+.visitus {
+  padding: 10rem 0;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 20% 100%, 18% 88%, 0 88%);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.1607843137), rgba(0, 0, 0, 0.7607843137) 56%, rgba(0, 0, 0, 0.8588235294)), url("https://cdn.prod.website-files.com/6226481a3123521a0f08ac50/6227dff91457fc6fe16c1d76_cta-bg-image-autocar-webflow-ecommerce-template.jpg");
+}
+.visitus__title {
+  color: white;
+}
+.visitus__button {
+  background-color: red;
+  color: white;
+}
+
+.locations {
+  height: 100vh;
 }/*# sourceMappingURL=style.css.map */

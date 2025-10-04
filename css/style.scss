@@ -24,6 +24,7 @@ h1,h2,h3,h4,h5{
 
 body{
     overflow-x: hidden;
+    
 
 }
 
@@ -418,6 +419,7 @@ body{
 
     &__img{
         width: -webkit-fill-available;
+        max-width: clamp(20rem,40vw,40rem);
     }
 
     &__infocontainer-title{
@@ -693,6 +695,10 @@ body{
 
     .services__button{
         margin-bottom: 5rem;
+    }
+
+    body{
+        zoom: 100%;
     }
 
 

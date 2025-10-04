@@ -370,6 +370,7 @@ body {
 }
 .whyus__img {
   width: -webkit-fill-available;
+  max-width: clamp(20rem, 40vw, 40rem);
 }
 .whyus__infocontainer-title {
   letter-spacing: 0.05em;
@@ -587,5 +588,8 @@ body {
   }
   .services__button {
     margin-bottom: 5rem;
+  }
+  body {
+    zoom: 100%;
   }
 }/*# sourceMappingURL=style.css.map */

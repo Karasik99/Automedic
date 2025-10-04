@@ -152,7 +152,7 @@ body{
 }
 
 .services{
-
+    overflow-x: hidden;
     background-color: white;
 
     &__wrapper{
@@ -417,7 +417,7 @@ body{
     }
 
     &__img{
-        max-width: clamp(17rem,40vw,40rem);
+        width: -webkit-fill-available;
     }
 
     &__infocontainer-title{
@@ -653,20 +653,50 @@ body{
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
+@media (max-width:1400px) {
+    .whyus__content{
+        flex-direction: column-reverse;
+    }
 
+    .mediacontent{
+        flex-direction: column;
+    }
+}
+
+
+@media (max-width:1350px) {
+    .whyus__background{
+        top: -10%;
+        right: 0%;
+    }
+}
 
 
 @media (max-width:750px) {
     .services__info{
         flex-direction: column;
         align-items: flex-start;
+        gap: 2rem;
     }
+
+    .services__content{
+        padding-top: 3rem;
+    }
+
+    .whyus{
+        padding: 10rem 0;
+    }
+
+    .locations__container{
+        width: -webkit-fill-available;
+    }
+
+    .services__button{
+        margin-bottom: 5rem;
+    }
+
+
+
+
 }
 
-
-@media (max-width:1400px) {
-    .whyus__content{
-        flex-direction: column-reverse;
-
-    }
-}

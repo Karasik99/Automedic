@@ -137,6 +137,7 @@ body {
 }
 
 .services {
+  overflow-x: hidden;
   background-color: white;
 }
 .services__wrapper {
@@ -368,7 +369,7 @@ body {
   max-width: 45rem;
 }
 .whyus__img {
-  max-width: clamp(17rem, 40vw, 40rem);
+  width: -webkit-fill-available;
 }
 .whyus__infocontainer-title {
   letter-spacing: 0.05em;
@@ -555,14 +556,36 @@ body {
   background-image: linear-gradient(to right, #000, rgba(0, 0, 0, 0.1607843137)), url("https://cdn.prod.website-files.com/6226481a3123521a0f08ac50/6228e37a05254c53475c1ae2_cta-bg-image-2-autocar-webflow-ecommerce-template.jpg");
 }
 
+@media (max-width: 1400px) {
+  .whyus__content {
+    flex-direction: column-reverse;
+  }
+  .mediacontent {
+    flex-direction: column;
+  }
+}
+@media (max-width: 1350px) {
+  .whyus__background {
+    top: -10%;
+    right: 0%;
+  }
+}
 @media (max-width: 750px) {
   .services__info {
     flex-direction: column;
     align-items: flex-start;
+    gap: 2rem;
   }
-}
-@media (max-width: 1400px) {
-  .whyus__content {
-    flex-direction: column-reverse;
+  .services__content {
+    padding-top: 3rem;
+  }
+  .whyus {
+    padding: 10rem 0;
+  }
+  .locations__container {
+    width: -webkit-fill-available;
+  }
+  .services__button {
+    margin-bottom: 5rem;
   }
 }/*# sourceMappingURL=style.css.map */

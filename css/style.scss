@@ -420,6 +420,7 @@ body{
     &__img{
         width: -webkit-fill-available;
         max-width: clamp(20rem,40vw,40rem);
+        height: clamp(20rem, 40vw, 40rem);
     }
 
     &__infocontainer-title{

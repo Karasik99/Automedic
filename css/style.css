@@ -37,6 +37,7 @@ body {
 .header__wrapper {
   max-width: 1320px;
   margin: auto;
+  padding: 0 1.5rem;
 }
 .header__nav {
   display: flex;
@@ -66,10 +67,15 @@ body {
   letter-spacing: 0.02em;
   text-transform: uppercase;
   padding: 0;
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 1.2vw, 1.2rem);
   font-style: italic;
   font-weight: 900;
   line-height: 1.125em;
+  transition: all 0.3s;
+}
+.header__link:hover {
+  color: red;
+  transition: all 0.3s;
 }
 .header__info {
   padding: 10rem 0 25rem 0;
@@ -90,7 +96,7 @@ body {
 }
 .header__suptitle-name {
   letter-spacing: 0.06em;
-  font-size: 2rem;
+  font-size: clamp(1rem, 2vw, 2rem);
   text-transform: uppercase;
   font-style: italic;
   font-weight: 900;
@@ -99,13 +105,13 @@ body {
 .header__title {
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  font-size: 6rem;
+  font-size: clamp(2rem, 6vw, 6rem);
   font-style: italic;
   font-weight: 900;
   line-height: 1.125em;
 }
 .header__subtitle {
-  font-size: 1.5rem;
+  font-size: clamp(1rem, 1.5vw, 1.5rem);
   font-weight: 400;
   line-height: 1.667em;
   max-width: 45rem;
@@ -137,6 +143,7 @@ body {
   max-width: 1320px;
   margin: auto;
   position: relative;
+  padding: 0 1.5rem;
 }
 .services__info {
   display: flex;
@@ -163,7 +170,7 @@ body {
 .services__info-number span {
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  font-size: 5rem;
+  font-size: clamp(2rem, 5vw, 5rem);
   font-style: italic;
   font-weight: 900;
   line-height: 1.125em;
@@ -191,15 +198,17 @@ body {
 }
 .services__suptitle-name {
   color: red;
+  z-index: 1;
 }
 .services__title {
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  font-size: 54px;
+  font-size: clamp(2rem, 3vw, 4rem);
   font-style: italic;
   font-weight: 900;
   line-height: 1.204em;
   color: #000;
+  z-index: 1;
   max-width: 48rem;
 }
 .services__subtitle {
@@ -207,13 +216,19 @@ body {
   right: -25%;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  font-size: 7rem;
+  font-size: clamp(2rem, 7vw, 7rem);
   font-style: italic;
   font-weight: 900;
   line-height: 1.125em;
   color: white;
   background-color: white;
   text-shadow: -1px -1px 0 #959494, 1px -1px 0 #959494, -1px 1px 0 #959494, 1px 1px 0 #959494;
+}
+.services__slader-arrows {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  padding-bottom: 2rem;
 }
 .services__slader {
   overflow-x: hidden;
@@ -283,6 +298,7 @@ body {
   max-width: 1320px;
   margin: auto;
   position: relative;
+  padding: 0 1.5rem;
 }
 .whyus__content {
   display: flex;
@@ -306,7 +322,7 @@ body {
   right: -10%;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  font-size: 9rem;
+  font-size: clamp(5rem, 9vw, 9rem);
   font-style: italic;
   font-weight: 900;
   line-height: 1.125em;
@@ -329,7 +345,7 @@ body {
 .whyus__suptitle {
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  font-size: 1.7rem;
+  font-size: clamp(1.2rem, 1.7vw, 1.7rem);
   font-style: italic;
   font-weight: 900;
   line-height: 1.204em;
@@ -340,19 +356,19 @@ body {
 .whyus__title {
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  font-size: 3.3rem;
+  font-size: clamp(2rem, 3.3vw, 3.3rem);
   font-style: italic;
   font-weight: 900;
   line-height: 1.204em;
 }
 .whyus__subtitle {
-  font-size: 1.5rem;
+  font-size: clamp(1rem, 1.5vw, 1.5rem);
   font-weight: 400;
   line-height: 1.667em;
   max-width: 45rem;
 }
 .whyus__img {
-  max-width: 40rem;
+  max-width: clamp(17rem, 40vw, 40rem);
 }
 .whyus__infocontainer-title {
   letter-spacing: 0.05em;
@@ -431,8 +447,122 @@ body {
 .visitus__button {
   background-color: red;
   color: white;
+  border: none;
 }
 
 .locations {
-  height: 100vh;
+  padding: 10rem 0;
+}
+.locations__content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.locations__background {
+  letter-spacing: 0.04em;
+  position: absolute;
+  top: -12%;
+  left: 50%;
+  text-transform: uppercase;
+  font-size: clamp(2rem, 9vw, 9rem);
+  font-style: italic;
+  font-weight: 900;
+  line-height: 1.125em;
+  color: white;
+  text-shadow: -1px -1px 0 #959494, 1px -1px 0 #959494, -1px 1px 0 #959494, 1px 1px 0 #959494;
+}
+.locations__suptitle {
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: clamp(1.2rem, 1.7vw, 1.7rem);
+  font-style: italic;
+  font-weight: 900;
+  line-height: 1.204em;
+  color: red;
+  z-index: 1;
+}
+.locations__title {
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: clamp(2rem, 3.3vw, 3.3rem);
+  font-style: italic;
+  font-weight: 900;
+  line-height: 1.204em;
+  color: #000;
+}
+.locations__subtitle {
+  font-size: clamp(1rem, 1.5vw, 1.5rem);
+  font-weight: 400;
+  line-height: 1.667em;
+  max-width: 45rem;
+  color: #959494;
+}
+.locations__container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  width: 1200px;
+  height: 600px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 3rem;
+  background-image: linear-gradient(rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.7803921569) 50%, #000), url("https://cdn.prod.website-files.com/6226481a3123521a0f08ac50/6228c393a1e6c0761091a38e_santa-monica-location-image-autocar-webflow-ecommerce-template.jpg");
+}
+.locations__container-title {
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: clamp(1.5rem, 2vw, 2rem);
+  font-style: italic;
+  font-weight: 900;
+  line-height: 1.429em;
+}
+.locations__container-subtitle {
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: clamp(1rem, 1.2vw, 1.22rem);
+  font-style: italic;
+  font-weight: 900;
+  line-height: 1.429em;
+  color: #959494;
+}
+.locations__container-address {
+  width: inherit;
+  display: flex;
+  justify-content: space-around;
+}
+.locations__container-address a {
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: clamp(1rem, 1.5vw, 1.5rem);
+  font-weight: 900;
+  line-height: 1.429em;
+  transition: all 0.3s;
+}
+.locations__container-address a:hover {
+  color: red;
+  transition: all 0.3s;
+  transform: translateY(-0.3rem);
+}
+
+.visitus2 {
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 85% 85%, 80% 100%, 0 100%);
+  background-image: linear-gradient(to right, #000, rgba(0, 0, 0, 0.1607843137)), url("https://cdn.prod.website-files.com/6226481a3123521a0f08ac50/6228e37a05254c53475c1ae2_cta-bg-image-2-autocar-webflow-ecommerce-template.jpg");
+}
+
+@media (max-width: 750px) {
+  .services__info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+@media (max-width: 1400px) {
+  .whyus__content {
+    flex-direction: column-reverse;
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -38,6 +38,7 @@ body{
     &__wrapper{
         max-width: 1320px;
         margin: auto;
+        padding: 0 1.5rem;
     }
 
     &__nav{
@@ -71,10 +72,16 @@ body{
         letter-spacing: .02em;
         text-transform: uppercase;
         padding: 0;
-        font-size: 1.2rem;
+        font-size: clamp(1rem, 1.2vw, 1.2rem);
         font-style: italic;
         font-weight: 900;
         line-height: 1.125em;
+        transition: all .3s;
+    }
+
+    &__link:hover{
+        color: red;
+        transition: all .3s;
     }
 
     &__info{
@@ -99,7 +106,7 @@ body{
 
     &__suptitle-name{
         letter-spacing: .06em;
-        font-size: 2rem;
+        font-size: clamp(1rem, 2vw, 2rem);
         text-transform: uppercase;
         font-style: italic;
         font-weight: 900;
@@ -109,14 +116,14 @@ body{
     &__title{
         letter-spacing: .04em;
         text-transform: uppercase;
-        font-size: 6rem;
+        font-size: clamp(2rem, 6vw, 6rem);
         font-style: italic;
         font-weight: 900;
         line-height: 1.125em;
     }
 
     &__subtitle{
-        font-size: 1.5rem;
+        font-size: clamp(1rem, 1.5vw, 1.5rem);
         font-weight: 400;
         line-height: 1.667em;
         max-width: 45rem;
@@ -152,6 +159,7 @@ body{
         max-width: 1320px;
         margin: auto;
         position: relative;
+        padding: 0 1.5rem;
     }
 
     &__info{
@@ -182,7 +190,7 @@ body{
     &__info-number span{
         letter-spacing: .04em;
         text-transform: uppercase;
-        font-size: 5rem;
+        font-size: clamp(2rem,5vw,5rem);
         font-style: italic;
         font-weight: 900;
         line-height: 1.125em;
@@ -216,16 +224,18 @@ body{
 
     &__suptitle-name{
         color: red;
+        z-index: 1;
     }
 
     &__title{
         letter-spacing: .05em;
         text-transform: uppercase;
-        font-size: 54px;
+        font-size: clamp(2rem,3vw,4rem);
         font-style: italic;
         font-weight: 900;
         line-height: 1.204em;
         color: #000;
+        z-index: 1;
         max-width: 48rem;
     }
 
@@ -234,13 +244,20 @@ body{
         right: -25%;
         letter-spacing: .04em;
         text-transform: uppercase;
-        font-size: 7rem;
+        font-size: clamp(2rem,7vw,7rem);
         font-style: italic;
         font-weight: 900;
         line-height: 1.125em;
         color: white;
         background-color: white;
         text-shadow: -1px -1px 0 #959494, 1px -1px 0 #959494, -1px 1px 0 #959494, 1px 1px 0 #959494;
+    }
+
+    &__slader-arrows{
+        display: flex;
+        gap: 1rem;
+        justify-content: flex-end;
+        padding-bottom: 2rem;
     }
 
     &__slader{
@@ -319,6 +336,7 @@ body{
         max-width: 1320px;
         margin: auto;
         position: relative;
+        padding: 0 1.5rem;
     }
 
     &__content{
@@ -345,7 +363,7 @@ body{
         right: -10%;
         letter-spacing: .04em;
         text-transform: uppercase;
-        font-size: 9rem;
+        font-size: clamp(5rem,9vw,9rem);
         font-style: italic;
         font-weight: 900;
         line-height: 1.125em;
@@ -372,7 +390,7 @@ body{
     &__suptitle{
         letter-spacing: .05em;
         text-transform: uppercase;
-        font-size: 1.7rem;
+        font-size: clamp(1.2rem,1.7vw,1.7rem);
         font-style: italic;
         font-weight: 900;
         line-height: 1.204em;
@@ -385,21 +403,21 @@ body{
     &__title{
         letter-spacing: .05em;
         text-transform: uppercase;
-        font-size: 3.3rem;
+        font-size: clamp(2rem,3.3vw,3.3rem);
         font-style: italic;
         font-weight: 900;
         line-height: 1.204em;
     }
 
     &__subtitle{
-        font-size: 1.5rem;
+        font-size: clamp(1rem,1.5vw,1.5rem);
         font-weight: 400;
         line-height: 1.667em;
         max-width: 45rem;
     }
 
     &__img{
-        max-width: 40rem;
+        max-width: clamp(17rem,40vw,40rem);
     }
 
     &__infocontainer-title{
@@ -492,6 +510,7 @@ body{
     &__button{
         background-color: red;
         color: white;
+        border: none;
     }
 
 
@@ -503,5 +522,151 @@ body{
 
 
 .locations{
-    height: 100vh;
+    padding: 10rem 0;
+
+
+    &__content{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    &__background{
+        letter-spacing: 0.04em;
+        position: absolute;
+        top: -12%;
+        left: 50%;
+        text-transform: uppercase;
+        font-size: clamp(2rem,9vw,9rem);
+        font-style: italic;
+        font-weight: 900;
+        line-height: 1.125em;
+        color: white;
+        text-shadow: -1px -1px 0 #959494, 1px -1px 0 #959494, -1px 1px 0 #959494, 1px 1px 0 #959494;
+    }
+
+    &__suptitle{
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        font-size: clamp(1.2rem,1.7vw,1.7rem);
+        font-style: italic;
+        font-weight: 900;
+        line-height: 1.204em;
+        color: red;
+        z-index: 1;
+    }
+
+    &__title{
+        text-align: center;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        font-size: clamp(2rem, 3.3vw, 3.3rem);
+        font-style: italic;
+        font-weight: 900;
+        line-height: 1.204em;
+        color: #000;
+    }
+
+    &__subtitle{
+        font-size: clamp(1rem,1.5vw,1.5rem);
+        font-weight: 400;
+        line-height: 1.667em;
+        max-width: 45rem;
+        color: #959494;
+    }
+
+    &__container{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-end;
+        width: 1200px;
+        height: 600px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 3rem;
+        background-image: linear-gradient(#0000 10%, #000000c7 50%, #000), url('https://cdn.prod.website-files.com/6226481a3123521a0f08ac50/6228c393a1e6c0761091a38e_santa-monica-location-image-autocar-webflow-ecommerce-template.jpg');
+    }
+
+    &__container-title{
+        letter-spacing: .05em;
+        text-transform: uppercase;
+        font-size: clamp(1.5rem,2vw,2rem);
+        font-style: italic;
+        font-weight: 900;
+        line-height: 1.429em;
+    }
+
+    &__container-subtitle{
+        letter-spacing: .05em;
+        text-transform: uppercase;
+        font-size: clamp(1rem,1.2vw,1.22rem);
+        font-style: italic;
+        font-weight: 900;
+        line-height: 1.429em;
+        color: #959494;
+    }
+
+    &__container-address{
+        width: inherit;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    &__container-address a{
+        letter-spacing: .05em;
+        text-transform: uppercase;
+        font-size: clamp(1rem,1.5vw,1.5rem);
+        font-weight: 900;
+        line-height: 1.429em;
+        transition: all .3s;
+    }
+
+    &__container-address a:hover{
+        color: red;
+        transition: all .3s;
+        transform: translateY(-.3rem);
+    }
+
+
+    
+
+
+    
+}
+
+.visitus2{
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 85% 85%, 80% 100%, 0 100%); 
+    background-image: linear-gradient(to right, #000, #00000029), url("https://cdn.prod.website-files.com/6226481a3123521a0f08ac50/6228e37a05254c53475c1ae2_cta-bg-image-2-autocar-webflow-ecommerce-template.jpg");
+}
+
+
+
+
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+@media (max-width:750px) {
+    .services__info{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+
+@media (max-width:1400px) {
+    .whyus__content{
+        flex-direction: column-reverse;
+
+    }
 }

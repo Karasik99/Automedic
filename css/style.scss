@@ -671,6 +671,10 @@ body{
     .whyus__background{
         right: 7%;
     }
+
+    .about__background{
+        right: 65%;
+    }
 }
 
 
@@ -681,6 +685,13 @@ body{
 
     .mediacontent{
         flex-direction: column;
+    }
+}
+
+@media (max-width:1400px) {
+    .about__background{
+        top: -10%;
+        right: 30%;
     }
 }
 

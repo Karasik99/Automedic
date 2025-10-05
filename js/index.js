@@ -7,21 +7,45 @@ let BUTTONS = document.querySelector('.services__slader-arrows')
 let CARDLINE = document.querySelector('.services__slader')
 let SLADERCARDS = document.querySelectorAll('.services__slader-slade')
 let BODY = document.querySelector('body')
+
 const CARDWIDTH = 432
 let OFFSET = 0
 let INTERVAL = (SLADERCARDS.length*CARDWIDTH)-CARDWIDTH*2   
 
 
 
+
+let FORM = document.querySelector('.form')
+let MAINBTNS = document.querySelectorAll('.main__button') 
 let BURGER = document.querySelector('.header__hamburger') 
 let NAV = document.querySelector('.header__menu')
 
 
+MAINBTNS.forEach((e)=>{
+    e.addEventListener('click', OpenMenu)
+})
 
-
-BODY.addEventListener('click',HideMenu)
+BODY.addEventListener('click', HideMenu)
+BODY.addEventListener('click', CloseMenu)
 BURGER.addEventListener('click', Burgermenu)
 BUTTONS.addEventListener('click', Slader)
+
+
+
+
+function CloseMenu(event){
+    if(!event.target.closest('.main__button') && !event.target.closest('.form')){
+        FORM.classList.remove('activeform')
+    }
+}
+
+
+function OpenMenu(event){
+    if(event.target.closest('.main__button')) {
+         FORM.classList.toggle('activeform')
+    }
+}
+
 
 
 function HideMenu(event){
@@ -41,7 +65,6 @@ function Burgermenu(event){
 
 
 function Slader(event){
-
     if(event.target.closest('.btn-right')){
         OFFSET+=CARDWIDTH
         if(OFFSET>INTERVAL){

@@ -613,6 +613,7 @@ body {
 }
 .form__title {
   color: white;
+  font-size: clamp(1.5rem, 3.3vw, 3.3rem);
 }
 .form__data {
   display: flex;
@@ -811,5 +812,11 @@ body {
   }
   .services__slader-slade-text {
     font-size: 0.8rem;
+  }
+  .activeform {
+    padding: 2rem 0 0rem;
+  }
+  .form__content {
+    gap: 1rem;
   }
 }/*# sourceMappingURL=style.css.map */

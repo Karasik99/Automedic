@@ -705,6 +705,7 @@ body{
 
     &__title{
         color: white;
+        font-size: clamp(1.5rem, 3.3vw, 3.3rem);  
     }
 
     &__data{
@@ -973,5 +974,13 @@ body{
 
     .services__slader-slade-text{
         font-size: .8rem;
+    }
+
+    .activeform{
+        padding: 2rem 0 0rem;
+    }
+
+    .form__content{
+        gap: 1rem;
     }
 }

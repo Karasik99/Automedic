@@ -373,7 +373,7 @@ body{
         right: -10%;
         letter-spacing: .04em;
         text-transform: uppercase;
-        font-size: clamp(5rem,9vw,9rem);
+        font-size: clamp(3rem,9vw,9rem);
         font-style: italic;
         font-weight: 900;
         line-height: 1.125em;
@@ -430,6 +430,7 @@ body{
         width: -webkit-fill-available;
         max-width: clamp(20rem,40vw,40rem);
         height: clamp(20rem, 40vw, 40rem);
+        object-fit: cover;
     }
 
     &__infocontainer-title{
@@ -665,6 +666,14 @@ body{
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
+
+@media (max-width:1650px) {
+    .whyus__background{
+        right: 7%;
+    }
+}
+
+
 @media (max-width:1400px) {
     .whyus__content{
         flex-direction: column-reverse;
@@ -679,7 +688,7 @@ body{
 @media (max-width:1350px) {
     .whyus__background{
         top: -10%;
-        right: 0%;
+        right: 30%;
     }
 }
 
@@ -735,6 +744,20 @@ body{
 
     body{
         zoom: 100%;
+    }
+}
+
+@media (max-width:550px) {
+    .whyus__background{
+        right: 21%;
+    }
+
+    .whyus__button{
+        padding: 1.5rem 3rem;
+    }
+
+    .whyus__info{
+        align-items: center;
     }
 }
 

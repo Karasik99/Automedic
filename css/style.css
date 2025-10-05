@@ -331,7 +331,7 @@ body {
   right: -10%;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  font-size: clamp(5rem, 9vw, 9rem);
+  font-size: clamp(3rem, 9vw, 9rem);
   font-style: italic;
   font-weight: 900;
   line-height: 1.125em;
@@ -380,6 +380,7 @@ body {
   width: -webkit-fill-available;
   max-width: clamp(20rem, 40vw, 40rem);
   height: clamp(20rem, 40vw, 40rem);
+  object-fit: cover;
 }
 .whyus__infocontainer-title {
   letter-spacing: 0.05em;
@@ -566,6 +567,11 @@ body {
   background-image: linear-gradient(to right, #000, rgba(0, 0, 0, 0.1607843137)), url("https://cdn.prod.website-files.com/6226481a3123521a0f08ac50/6228e37a05254c53475c1ae2_cta-bg-image-2-autocar-webflow-ecommerce-template.jpg");
 }
 
+@media (max-width: 1650px) {
+  .whyus__background {
+    right: 7%;
+  }
+}
 @media (max-width: 1400px) {
   .whyus__content {
     flex-direction: column-reverse;
@@ -577,7 +583,7 @@ body {
 @media (max-width: 1350px) {
   .whyus__background {
     top: -10%;
-    right: 0%;
+    right: 30%;
   }
 }
 @media (max-width: 1000px) {
@@ -621,6 +627,17 @@ body {
   }
   body {
     zoom: 100%;
+  }
+}
+@media (max-width: 550px) {
+  .whyus__background {
+    right: 21%;
+  }
+  .whyus__button {
+    padding: 1.5rem 3rem;
+  }
+  .whyus__info {
+    align-items: center;
   }
 }
 @media (max-width: 450px) {

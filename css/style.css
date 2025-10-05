@@ -572,6 +572,9 @@ body {
   .locations__background {
     left: 20%;
   }
+  .services__subtitle {
+    right: 25%;
+  }
 }
 @media (max-width: 1650px) {
   .whyus__background {
@@ -593,6 +596,11 @@ body {
   .about__background {
     top: -10%;
     right: 30%;
+  }
+}
+@media (max-width: 1366px) {
+  .services__slader-arrows {
+    justify-content: center;
   }
 }
 @media (max-width: 1350px) {
@@ -620,6 +628,12 @@ body {
   }
   .header__nav {
     justify-content: space-around;
+  }
+}
+@media (max-width: 768px) {
+  .services__subtitle {
+    right: 15%;
+    top: 75%;
   }
 }
 @media (max-width: 750px) {
@@ -654,6 +668,9 @@ body {
   .whyus__info {
     align-items: center;
   }
+  .services__button {
+    padding: 1.5rem 3rem;
+  }
 }
 @media (max-width: 450px) {
   .header__button {
@@ -664,5 +681,8 @@ body {
     justify-content: center;
     align-items: flex-start;
     gap: 1rem;
+  }
+  .services__slader-slade-text {
+    font-size: 0.8rem;
   }
 }/*# sourceMappingURL=style.css.map */

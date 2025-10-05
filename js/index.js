@@ -6,6 +6,7 @@ let RIGHTBTN = document.querySelector('.btn-right')
 let BUTTONS = document.querySelector('.services__slader-arrows')
 let CARDLINE = document.querySelector('.services__slader')
 let SLADERCARDS = document.querySelectorAll('.services__slader-slade')
+let BODY = document.querySelector('body')
 const CARDWIDTH = 432
 let OFFSET = 0
 let INTERVAL = (SLADERCARDS.length*CARDWIDTH)-CARDWIDTH*2   
@@ -18,16 +19,24 @@ let NAV = document.querySelector('.header__menu')
 
 
 
-
-
-
+BODY.addEventListener('click',HideMenu)
 BURGER.addEventListener('click', Burgermenu)
 BUTTONS.addEventListener('click', Slader)
+
+
+function HideMenu(event){
+    if(!event.target.closest('.header__hamburger')){
+        NAV.classList.remove('active')
+    }
+}
+
+
 
 function Burgermenu(event){
     if(event.target.closest('.header__hamburger')){
         NAV.classList.toggle('active')
     }
+
 }
 
 

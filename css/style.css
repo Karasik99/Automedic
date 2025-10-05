@@ -614,7 +614,7 @@ body {
   top: 0;
   left: 0%;
   width: 50%;
-  height: -webkit-fill-available;
+  height: 100vh;
   background: black;
   transition: right 3s;
   z-index: 10000;

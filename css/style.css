@@ -601,7 +601,7 @@ body {
 
 .element-animation.element-show {
   opacity: 1;
-  transition: all 2s;
+  transition: all 1s;
 }
 
 .header__menu.active {
@@ -684,7 +684,7 @@ body {
     pointer-events: none;
   }
   .header__nav {
-    justify-content: space-between;
+    justify-content: space-around;
   }
 }
 @media (max-width: 768px) {

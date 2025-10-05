@@ -22,9 +22,12 @@ h1,h2,h3,h4,h5{
     padding: 0;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     overflow-x: hidden;
-    
 
 }
 
@@ -64,6 +67,7 @@ body{
         justify-content: center;
         align-items: center;
         gap: 2rem;
+        transition: all 3s;
     }
 
     &__link{
@@ -112,6 +116,7 @@ body{
 
     &__suptitle hr{
         width: 10rem;
+        animation: hey 3s infinite;
     }
 
     &__suptitle-name{
@@ -121,6 +126,22 @@ body{
         font-style: italic;
         font-weight: 900;
         line-height: 1.111em;
+        animation: hey 5s infinite;
+    }
+
+    @keyframes hey {
+        from{
+            color: white;
+            border-color: white;
+        }
+        50%{
+            color: red;
+            border-color: red;
+        }
+        to {
+            color: white;
+            border-color: white;
+        }
     }
 
     &__title{
@@ -270,6 +291,12 @@ body{
         padding-bottom: 2rem;
     }
 
+    &__slader-arrows-btn{
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+
     &__slader{
         overflow-x: hidden;
         position: absolute;
@@ -278,6 +305,7 @@ body{
         justify-content: center;
         align-items: center;
         padding-bottom: 3rem;
+        transition: all 2s;
     }
 
     &__slader-slade{
@@ -659,8 +687,37 @@ body{
 }
 
 
+.element-animation{
+    opacity: 0;
+}
 
 
+.element-animation.element-show {
+    opacity: 1;
+    transition: all 2s;
+}
+
+
+
+.header__menu.active{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 3rem;
+    top: 0;
+    left: 0%;
+    width: 50%;
+    height: -webkit-fill-available;
+    background: black;
+    transition: right 3s;
+    z-index: 10000;
+    padding-top: 60px;
+    padding: 60px 20px 20px;
+    opacity: 1;
+    pointer-events: all;
+}
 
 
 
@@ -743,11 +800,12 @@ body{
     }
 
     .header__menu{
-        display: none;
+        opacity: 0;
+        pointer-events: none;
     }
 
     .header__nav{
-        justify-content: space-around;
+        justify-content: space-between;
     }
 }
 

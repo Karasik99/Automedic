@@ -18,25 +18,25 @@
 
         <div class="header__wrapper">
             <nav class="header__nav">
-                <div class="header__logo">Automedic+</div>
+                <div class="header__logo element-animation">Automedic+</div>
                 <ul class="header__menu">
                     <li class="header__item">
-                        <a href="/" class="header__link">
+                        <a href="#services" class="header__link">
                             Services
                         </a>
                     </li>
                     <li class="header__item">
-                        <a href="/" class="header__link">
+                        <a href="#whyus" class="header__link">
                             Whyus
                         </a>
                     </li>
                     <li class="header__item">
-                        <a href="/" class="header__link">
+                        <a href="#about" class="header__link">
                             About
                         </a>
                     </li>
                     <li class="header__item">
-                        <a href="/" class="header__link">
+                        <a href="#locations" class="header__link">
                             Locations
                         </a>
                     </li>
@@ -48,11 +48,11 @@
                     <hr>
                     <p class="header__suptitle-name">Car repair</p>
                 </div>
-                <h1 class="header__title">Auto maintenance, service & repair</h1>
+                <h1 class="header__title element-animation">Auto maintenance, service & repair</h1>
                 <h2 class="header__subtitle">
                     At vitae commodo amet libero tortor blandit risus condimentum mauris. Cras arcu tortor aenean turpis massa mauris ac mi facilisi cursus aliquam a ac maecenas purus amet sapien id suspendisse porttitor tempor at donec massa nibh massa urna et.
                 </h2>
-                <button class="header__button">Записаться на ремонт</button>
+                <button class="header__button element-animation">Записаться на ремонт</button>
             </div>
         </div>
     
@@ -60,9 +60,9 @@
 
     </section> 
 
-    <section class="services">
+    <section id="services" class="services">
         <div class="services__wrapper">
-            <div class="services__info">
+            <div class="services__info element-animation">
                 <div class="services__info-block">
                     <p class="services__info-number">10<span>+</span>
                     </p>
@@ -82,18 +82,22 @@
                 </div>
             </div>
 
-            <div class="services__content">
+            <div class="services__content ">
                 <div class="header__suptitle services__suptitle">
                     <hr>
-                    <p class="header__suptitle-name services__suptitle-name">services</p>
+                    <p class="header__suptitle-name services__suptitle-name element-animation">services</p>
                 </div>
                 <h2 class="services__title">We offer a wide range of car services</h2>
                 <h2 class="services__subtitle">services</h2>
             </div>
-            <div class="services__slader-wrapper">
+            <div class="services__slader-wrapper element-animation">
                 <div class="services__slader-arrows">
-                    <button class="services__slader-arrows-btn">Left</button>
-                    <button class="services__slader-arrows-btn">Right</button>
+                    <button class="services__slader-arrows-btn btn-left">
+                        <img src="./media/arrows-left.png" alt="">
+                    </button>
+                    <button class="services__slader-arrows-btn btn-right">
+                        <img src="./media/arrows-right.png" alt="">
+                    </button>
                 </div>
 
                 <div class="services__slader">
@@ -142,7 +146,7 @@
         </div>
     </section>
 
-    <section class="whyus">
+    <section id="whyus" class="whyus element-animation">
         <div class="whyus__wrapper">
             <h4 class="whyus__background">WHY US</h4>
             <div class="whyus__content">
@@ -176,7 +180,7 @@
         </div>
     </section>
 
-    <section class="whyus about">
+    <section id="about" class="whyus about element-animation">
         <div class="whyus__wrapper">
             <h4 class="whyus__background about__background">About</h4>
             <div class="whyus__content mediacontent">
@@ -196,7 +200,7 @@
         </div>
     </section>
 
-    <section class="whyus about visitus">
+    <section class="whyus about visitus element-animation">
         <div class="whyus__wrapper">
             <div class="whyus__content visitus__content">
                 <div class="whyus__info about__info">                  
@@ -212,7 +216,7 @@
         </div>
     </section>
 
-    <section class="locations">
+    <section id="locations" class="locations element-animation">
         <div class="locations__wrapper header__wrapper">
             <div class="locations__content">
                 <h4 class="locations__background">
@@ -237,7 +241,7 @@
 
     </section>
 
-    <section class="whyus about visitus visitus2 ">
+    <section class="whyus about visitus visitus2 element-animation ">
         <div class="whyus__wrapper">
             <div class="whyus__content visitus__content">
                 <div class="whyus__info about__info">                  
@@ -253,4 +257,6 @@
         </div>
     </section> 
 </body>
+<script src="./js/index.js"></script>
+
 </html>

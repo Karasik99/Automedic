@@ -599,6 +599,7 @@ body {
   opacity: 0;
   pointer-events: none;
   transition: all 2s;
+  display: none;
 }
 .form__content {
   display: flex;
@@ -638,6 +639,7 @@ body {
 }
 
 .activeform {
+  display: block;
   opacity: 1;
   transition: all 1s;
   pointer-events: all;

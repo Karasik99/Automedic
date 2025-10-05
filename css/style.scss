@@ -801,11 +801,12 @@ body{
 
     .header__menu{
         opacity: 0;
+        display: none;
         pointer-events: none;
     }
 
     .header__nav{
-        justify-content: space-around;
+        justify-content: space-between;
     }
 }
 

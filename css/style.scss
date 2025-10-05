@@ -53,7 +53,7 @@ body{
         letter-spacing: .02em;
         text-transform: uppercase;
         padding: 0;
-        font-size: 40px;
+        font-size: clamp(1.3rem,2.5vw,2.3rem);
         font-style: italic;
         font-weight: 900;
         line-height: 1.125em; 
@@ -83,6 +83,15 @@ body{
     &__link:hover{
         color: red;
         transition: all .3s;
+    }
+
+    &__hamburger{
+        display: none;
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        order: 1;
     }
 
     &__info{
@@ -674,6 +683,32 @@ body{
     }
 }
 
+@media (max-width:1000px) {
+    .header__info{
+        padding: 1rem 0 10rem ;
+    }
+}
+
+
+@media (max-width:850px) {
+    .header__hamburger{
+        display: block;
+        background: transparent;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        order: 1;
+    }
+
+    .header__menu{
+        display: none;
+    }
+
+    .header__nav{
+        justify-content: space-around;
+    }
+}
+
 
 @media (max-width:750px) {
     .services__info{
@@ -701,9 +736,10 @@ body{
     body{
         zoom: 100%;
     }
-
-
-
-
 }
 
+@media (max-width:450px) {
+    .header__button{
+        padding: 1.5rem 3rem;
+    }
+}

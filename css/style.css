@@ -567,6 +567,11 @@ body {
   background-image: linear-gradient(to right, #000, rgba(0, 0, 0, 0.1607843137)), url("https://cdn.prod.website-files.com/6226481a3123521a0f08ac50/6228e37a05254c53475c1ae2_cta-bg-image-2-autocar-webflow-ecommerce-template.jpg");
 }
 
+@media (max-width: 1950px) {
+  .locations__background {
+    left: 20%;
+  }
+}
 @media (max-width: 1650px) {
   .whyus__background {
     right: 7%;

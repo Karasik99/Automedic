@@ -71,9 +71,6 @@ body{
     }
 
     &__link{
-        font-family: "Lato", sans-serif;
-        font-weight: 400;
-        font-style: normal;
         letter-spacing: .02em;
         text-transform: uppercase;
         padding: 0;
@@ -677,9 +674,79 @@ body{
 }
 
 .visitus2{
-    clip-path: polygon(0 0, 100% 0, 100% 85%, 85% 85%, 80% 100%, 0 100%); 
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 20% 100%, 0% 100%, 0 100%); 
     background-image: linear-gradient(to right, #000, #00000029), url("https://cdn.prod.website-files.com/6226481a3123521a0f08ac50/6228e37a05254c53475c1ae2_cta-bg-image-2-autocar-webflow-ecommerce-template.jpg");
 }
+
+
+
+
+.footer{
+    background-color: #000;
+    padding: 4rem 0;
+
+    &__wrapper{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+
+    &__menu{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+    }
+
+    &__item a{
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+        padding: 0;
+        font-size: clamp(1rem, 1.2vw, 1.2rem);
+        font-style: italic;
+        font-weight: 900;
+        line-height: 1.125em;
+        transition: all 0.3s;
+    }
+
+    &__item a:hover{
+        color: red;
+        transition: all .3s;
+    }
+
+    &__content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__logo{
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+        padding: 0;
+        font-size: clamp(1.3rem, 2.5vw, 2.3rem);
+        font-style: italic;
+        font-weight: 900;
+        line-height: 1.125em;
+    }
+
+    &__messangers{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+}
+
+
+
+
+
+
+
+
+
 
 
 
@@ -732,7 +799,6 @@ body{
     &__data input::-ms-value{
         color: #000;
     }
-
 
 }
 
@@ -984,5 +1050,26 @@ body{
 
     .form__content{
         gap: 1rem;
+    }
+
+    .footer__menu{
+        flex-direction: column;
+        gap: 1rem;
+        align-items: flex-start;
+    }
+
+    .footer__content{
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .footer__wrapper{
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .footer__link img{
+        width: 2.5rem;
     }
 }

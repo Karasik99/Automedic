@@ -7,6 +7,7 @@ let BUTTONS = document.querySelector('.services__slader-arrows')
 let CARDLINE = document.querySelector('.services__slader')
 let SLADERCARDS = document.querySelectorAll('.services__slader-slade')
 let BODY = document.querySelector('body')
+let CROSS = document.querySelector('.form__cross')
 
 const CARDWIDTH = 432
 let OFFSET = 0
@@ -27,6 +28,7 @@ MAINBTNS.forEach((e)=>{
 
 BODY.addEventListener('click', HideMenu)
 BODY.addEventListener('click', CloseMenu)
+CROSS.addEventListener('click', CloseMenu)
 BURGER.addEventListener('click', Burgermenu)
 BUTTONS.addEventListener('click', Slader)
 
@@ -34,7 +36,7 @@ BUTTONS.addEventListener('click', Slader)
 
 
 function CloseMenu(event){
-    if(!event.target.closest('.main__button') && !event.target.closest('.form')){
+    if(!event.target.closest('.main__button') && !event.target.closest('.form') || event.target.closest('.form__cross')){
         FORM.classList.remove('activeform')
     }
 }

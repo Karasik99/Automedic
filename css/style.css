@@ -654,6 +654,15 @@ body {
   padding: 2rem;
   align-items: center;
   gap: 3rem;
+  position: relative;
+}
+.form__cross {
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
 }
 .form__subtitle {
   color: white;
@@ -859,6 +868,9 @@ body {
   }
   .services__button {
     padding: 1.5rem 3rem;
+  }
+  .form__cross img {
+    width: 30px;
   }
 }
 @media (max-width: 450px) {

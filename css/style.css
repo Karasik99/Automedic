@@ -271,6 +271,8 @@ body {
   align-items: center;
   padding-bottom: 3rem;
   transition: all 2s;
+  user-select: none;
+  touch-action: pan-y;
 }
 .services__slader-slade {
   width: 400px;

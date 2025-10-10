@@ -13,7 +13,8 @@ const CARDWIDTH = 432
 let OFFSET = 0
 let INTERVAL = (SLADERCARDS.length*CARDWIDTH)-CARDWIDTH*2   
 
-
+let TOUCHCOORD = 0
+let end = 0
 
 
 let FORM = document.querySelector('.form')
@@ -26,11 +27,71 @@ MAINBTNS.forEach((e)=>{
     e.addEventListener('click', OpenMenu)
 })
 
+
+
 BODY.addEventListener('click', HideMenu)
 BODY.addEventListener('click', CloseMenu)
 CROSS.addEventListener('click', CloseMenu)
 BURGER.addEventListener('click', Burgermenu)
 BUTTONS.addEventListener('click', Slader)
+
+
+
+CARDLINE.addEventListener('touchmove', MOVE)
+CARDLINE.addEventListener('touchend', UP)
+
+
+function MOVE(event){
+    TOUCHCOORD = event.touches[0].screenX
+    console.log(TOUCHCOORD)
+
+}
+
+function UP(event){
+    end = event.changedTouches[0].clientX
+    console.log(end)
+
+    
+    if(1000>TOUCHCOORD){
+        OFFSET+=TOUCHCOORD
+        CARDLINE.style.transform = `translateX(${-OFFSET}px)`
+    }
+    else{
+        OFFSET-=TOUCHCOORD
+        CARDLINE.style.transform = `translateX(${-OFFSET}px)`
+    }
+}
+
+
+
+
+function Slader(event){
+    if(event.target.closest('.btn-right')){
+        OFFSET+=CARDWIDTH
+        if(OFFSET>INTERVAL){
+            OFFSET = 0
+        }
+        CARDLINE.style.transform = `translateX(${-OFFSET}px)`
+        console.log(OFFSET)
+    }
+    if(event.target.closest('.btn-left')){
+        OFFSET-=CARDWIDTH
+        if(OFFSET<0){
+            OFFSET = INTERVAL
+        }
+        CARDLINE.style.transform = `translateX(${-OFFSET}px)`
+    }
+    }
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -65,24 +126,6 @@ function Burgermenu(event){
 
 }
 
-
-function Slader(event){
-    if(event.target.closest('.btn-right')){
-        OFFSET+=CARDWIDTH
-        if(OFFSET>INTERVAL){
-            OFFSET = 0
-        }
-        CARDLINE.style.transform = `translateX(${-OFFSET}px)`
-        console.log(OFFSET)
-    }
-    if(event.target.closest('.btn-left')){
-        OFFSET-=CARDWIDTH
-        if(OFFSET<0){
-            OFFSET = INTERVAL
-        }
-        CARDLINE.style.transform = `translateX(${-OFFSET}px)`
-    }
-    }
 
 
 

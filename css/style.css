@@ -678,10 +678,10 @@ body {
   display: flex;
   align-items: center;
   padding: 1rem 3rem;
-  border: none;
+  border: 2px solid white;
   font-size: clamp(0.8rem, 1.4vw, 1.5rem);
   cursor: pointer;
-  background-color: red;
+  background-color: transparent;
   letter-spacing: 0.06em;
   justify-content: center;
   font-style: italic;

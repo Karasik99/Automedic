@@ -674,6 +674,19 @@ body {
   font-size: clamp(0.8rem, 1.4vw, 1.5rem);
   cursor: pointer;
 }
+.form__data button {
+  display: flex;
+  align-items: center;
+  padding: 1rem 3rem;
+  border: none;
+  font-size: clamp(0.8rem, 1.4vw, 1.5rem);
+  cursor: pointer;
+  background-color: red;
+  letter-spacing: 0.06em;
+  justify-content: center;
+  font-style: italic;
+  cursor: pointer;
+}
 .form__data input::placeholder {
   color: #000;
 }
@@ -777,6 +790,17 @@ body {
     padding: 1rem 0 10rem;
   }
 }
+@media (max-width: 1300px) {
+  .form__data {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+  }
+  .form__data input {
+    padding: 1rem 1rem;
+  }
+}
 @media (max-width: 850px) {
   .header__hamburger {
     display: block;
@@ -793,17 +817,6 @@ body {
   }
   .header__nav {
     justify-content: space-between;
-  }
-}
-@media (max-width: 800px) {
-  .form__data {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    width: 100%;
-  }
-  .form__data input {
-    padding: 1rem 1rem;
   }
 }
 @media (max-width: 768px) {

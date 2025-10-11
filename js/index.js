@@ -20,6 +20,9 @@ let NAV = document.querySelector('.header__menu')
 const CARDWIDTH = 432
 let OFFSET = 0
 let INTERVAL = (SLADERCARDS.length*CARDWIDTH)-CARDWIDTH*2   
+let GREATBTN = document.querySelector('.great__cross')
+let GREATFORM = document.querySelector('.great')
+
 
 
 
@@ -34,14 +37,12 @@ MAINBTNS.forEach((e)=>{
 BODY.addEventListener('click', HideMenu)
 BODY.addEventListener('click', CloseMenu)
 CROSS.addEventListener('click', CloseMenu)
+GREATBTN.addEventListener('click', Сlosegreat)
 BURGER.addEventListener('click', Burgermenu)
 BUTTONS.addEventListener('click', Slader)
+FORM.addEventListener('submit',((event)=>{Submit(event)}))
 
-
-
-
-
-
+document.addEventListener('submit',((event)=>{Opengreat(event)}))
 
 
 
@@ -64,16 +65,16 @@ function Slader(event){
     }
 
 
+    function Opengreat(){
+        FORM.classList.remove('activeform')
+        GREATFORM.classList.add('activegreat')
+    }
 
-
-
-
-
-
-
-
-
-
+    function Сlosegreat(event){
+        if(event.target.closest('.great__cross')){
+            GREATFORM.classList.remove('activegreat')
+        }
+    }
 
 
 function CloseMenu(event){
@@ -128,13 +129,7 @@ function Burgermenu(event){
 
 
 
-
-
-
-
-
-      
-    FORM.addEventListener('submit',((event)=>{Submit(event)}))
+  
 
       
       

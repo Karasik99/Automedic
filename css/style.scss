@@ -748,7 +748,52 @@ body{
 
 
 
+.great{
+    opacity: 0;
+    pointer-events: none;
+    display: none;
 
+
+    &__title{
+        color: green;
+        font-size: clamp(1rem,1.5vw,1.7rem);
+    }
+
+    &__subtitle{
+        color: white;
+        font-size: clamp(.8rem,1.2vw,1.5rem);
+    }
+
+    &__cross{
+        position: absolute;
+        top: 5%;
+        right: 5%;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    &__cross img{ 
+        width: 30px;
+    }
+}
+
+.activegreat{
+    opacity: 1;
+    pointer-events: all;
+    z-index: 10000;
+    background-color: black;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    padding: 4rem 2rem;
+    transform: translate(-50%,-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-direction: column;
+}
 
 
 
@@ -760,7 +805,6 @@ body{
     pointer-events: none;
     transition: all 2s;
     display: none;
-
 
     &__content{
         display: flex;
@@ -815,7 +859,14 @@ body{
         letter-spacing: 0.06em;
         justify-content: center;
         font-style: italic;
+        transition: all 1s;
         cursor: pointer;
+    }
+
+    &__data button:hover{
+        transition: all 1s;
+        background-color: green;
+        border: 2px solid green;
     }
 
 
@@ -1105,4 +1156,13 @@ body{
     .footer__link img{
         width: 2.5rem;
     }
+
+    .great img{
+        width: 4.5rem;
+    }
+
+    .great__cross img{
+        width: 25px;
+    }
+
 }

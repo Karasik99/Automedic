@@ -311,8 +311,8 @@
                     <h4 class="locations__title form__title element-animation">We have a Car <br> workshop near you</h4>
                     <p class="locations__subtitle form__subtitle">At vitae commodo amet libero tortor blandit risus condimentum mauris. Cras arcu tortor aenean turpis massa mauris ac mi facilisi cursus.</p>
                     <form class="form__data">
-                        <input type="text" name="name" id="name" value="" placeholder="Ваше имя">
-                        <input type="tel" name="tel" id="tel" maxlength="13" value="+375" placeholder="+375">
+                        <input type="text" name="name" id="name" value="" placeholder="Ваше имя" required>
+                        <input type="tel" name="tel" id="tel" minlength="13" placeholder="+375291234567" required>
                         <button class="form__data-btn" type='submit'>Записаться</button>
                     </form>
                 </div>
@@ -320,7 +320,15 @@
         </section>
 
 
-
+        <section class="great">
+            <button class="great__cross">
+                <img src="./media/cross.png" alt="cross">
+            </button>
+            <img src="./media/check.png" alt="check">
+            <h4 class="great__title">Ваша заявка одобрена</h4>
+            <p class="great__subtitle">Мы свяжемся с вами в ближайшее время для уточнения деталей ремонта.</p>
+            <p class="great__subtitle">Спасибо что выбрали нас.</p>
+        </section>
      
 
 

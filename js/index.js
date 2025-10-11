@@ -9,9 +9,10 @@ let SLADERCARDS = document.querySelectorAll('.services__slader-slade')
 let BODY = document.querySelector('body')
 let CROSS = document.querySelector('.form__cross')
 
-
+let FORMBTN = document.querySelector('.form__data-btn')
 
 let FORM = document.querySelector('.form')
+let FormDatas = document.querySelector('.form__data')
 let MAINBTNS = document.querySelectorAll('.main__button') 
 let BURGER = document.querySelector('.header__hamburger') 
 let NAV = document.querySelector('.header__menu')
@@ -35,6 +36,7 @@ BODY.addEventListener('click', CloseMenu)
 CROSS.addEventListener('click', CloseMenu)
 BURGER.addEventListener('click', Burgermenu)
 BUTTONS.addEventListener('click', Slader)
+
 
 
 
@@ -131,30 +133,21 @@ function Burgermenu(event){
 
 
 
-
-
       
-      FORM.addEventListener('submit',((event)=>{Submit(event)}))
+    FORM.addEventListener('submit',((event)=>{Submit(event)}))
 
       
       
       function Submit(event){
-        console.log(event)
-        //   event.preventDefault()
-        //   let formdata = new FormData(event.target)
-        //   Object.fromEntries(formdata)
-  
-
-        //   event.target.reset()
-        //   let obj ={}
-          
-        //   for (var pair of formdata.entries()) {
-        //       obj[pair[0]] = pair[1]
-        //   }
-      
-        //   // sendEmail(obj)
-        // //   sendMessageTelegram(obj)
-        // console.log(obj)
+        event.preventDefault()
+        let formdata = new FormData(event.target)
+        Object.fromEntries(formdata)
+        event.target.reset()
+        let obj ={}
+        for (var pair of formdata.entries()) {
+            obj[pair[0]] = pair[1]
+        }
+        sendMessageTelegram(obj)
       }
       
       
@@ -164,16 +157,10 @@ function Burgermenu(event){
           const token =  "6536032829:AAGJt84Fx5iABijzDdj9YoF7kYsICDFp0AU"
           const chat_id = '-1002115025266'
           let text = `
-          Новый клиент хочет пообщаться насчет потолков %0A
-          Имя клиента: ${obj.name}%0A
-          Номер клиента: ${obj.telephone}%0A
-          Email почта: ${obj.email}%0A
-          Его расчеты, исходя из калькулятора:%0A
-          Метры квадратные : ${obj.RANGEVALUE}%0A
-          Количество труб : ${obj.PIPEVALUE}%0A
-          Количество светильников : ${obj.LIGHTVALUE}%0A
-          Количество углов : ${obj.ANGLESVALUE}%0A
-          Итоговая сумма : ${Number(obj.RESULT)} € `
+          Новая заявка с сайта Automedic %0A
+          Имя клиента: ${obj.name} %0A
+          Номер клиента: ${obj.tel} %0A
+          `
       
           const url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chat_id}&text=${text}/` 
       

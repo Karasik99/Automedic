@@ -19,7 +19,7 @@ let NAV = document.querySelector('.header__menu')
 
 const CARDWIDTH = 432
 let OFFSET = 0
-let INTERVAL = (SLADERCARDS.length*CARDWIDTH)-CARDWIDTH*2   
+let INTERVAL = (SLADERCARDS.length*CARDWIDTH)-CARDWIDTH   
 let GREATBTN = document.querySelector('.great__cross')
 let GREATFORM = document.querySelector('.great')
 

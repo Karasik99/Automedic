@@ -72,7 +72,7 @@ body {
   color: red;
 }
 .header__logo img {
-  width: 20px;
+  width: 1.1rem;
 }
 .header__menu {
   display: flex;

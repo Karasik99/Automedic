@@ -228,7 +228,7 @@ body {
   color: #000;
 }
 .services__content {
-  padding-top: 10rem;
+  padding-top: 4rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;

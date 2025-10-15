@@ -882,9 +882,9 @@ body {
 .activeform {
   display: block;
   opacity: 1;
+  width: auto;
   transition: all 1s;
   pointer-events: all;
-  width: 85vw;
   z-index: 10000;
   position: fixed;
   top: 50%;
@@ -981,6 +981,9 @@ body {
     flex-direction: column;
     gap: 1rem;
     width: 100%;
+  }
+  .activeform {
+    width: 90%;
   }
   .form__data input {
     padding: 1rem 1rem;

@@ -38,31 +38,31 @@ BODY.addEventListener('click', HideMenu)
 BODY.addEventListener('click', CloseMenu)
 CROSS.addEventListener('click', CloseMenu)
 GREATBTN.addEventListener('click', Сlosegreat)
-BURGER.addEventListener('click', Burgermenu)
-BUTTONS.addEventListener('click', Slader)
+// BURGER.addEventListener('click', Burgermenu)
+// BUTTONS.addEventListener('click', Slader)
 FORM.addEventListener('submit',((event)=>{Submit(event)}))
 
 document.addEventListener('submit',((event)=>{Opengreat(event)}))
 
 
 
-function Slader(event){
-    if(event.target.closest('.btn-right')){
-        OFFSET+=CARDWIDTH
-        if(OFFSET>INTERVAL){
-            OFFSET = 0
-        }
-        CARDLINE.style.transform = `translateX(${-OFFSET}px)`
-        console.log(OFFSET)
-    }
-    if(event.target.closest('.btn-left')){
-        OFFSET-=CARDWIDTH
-        if(OFFSET<0){
-            OFFSET = INTERVAL
-        }
-        CARDLINE.style.transform = `translateX(${-OFFSET}px)`
-    }
-    }
+// function Slader(event){
+//     if(event.target.closest('.btn-right')){
+//         OFFSET+=CARDWIDTH
+//         if(OFFSET>INTERVAL){
+//             OFFSET = 0
+//         }
+//         CARDLINE.style.transform = `translateX(${-OFFSET}px)`
+//         console.log(OFFSET)
+//     }
+//     if(event.target.closest('.btn-left')){
+//         OFFSET-=CARDWIDTH
+//         if(OFFSET<0){
+//             OFFSET = INTERVAL
+//         }
+//         CARDLINE.style.transform = `translateX(${-OFFSET}px)`
+//     }
+//     }
 
 
     function Opengreat(){
@@ -164,3 +164,48 @@ function Burgermenu(event){
           api.send()
       }
       
+
+
+
+
+
+
+
+
+
+
+    // const slider = document.querySelector('.slider');
+    // const range = document.querySelector('.slider__range-js');
+      
+    // range.addEventListener('input', () => {
+    //     slider.style.setProperty('--value', range.value + '%');
+    // });
+
+
+
+
+
+
+    function hello(){
+        let x = document.querySelectorAll('.slider')
+        let y = document.querySelectorAll('.slider__range-js')
+
+        y.forEach((element)=>{
+            element.addEventListener('input', () =>{
+                x.forEach((elem)=>{
+                    elem.style.setProperty('--value', element.value + '%');
+                })
+            })
+        })
+
+
+
+
+    }
+
+
+hello()
+
+
+
+

@@ -39,7 +39,6 @@ body{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 70% 100%, 67% 93%, 0 93%);
 
 
     &__wrapper{
@@ -179,8 +178,8 @@ body{
     }
 
     &__button{
-        border: 2.5px solid red;
-        background-color: red;
+        border: 2.5px solid #fff;
+        background-color: transparent;
         text-align: center;
         letter-spacing: .06em;
         text-transform: uppercase;
@@ -202,7 +201,11 @@ body{
 
 .services{
     overflow-x: hidden;
-    background-color: white;
+    background-color: black;
+    background-image: linear-gradient(to right, #000, #00000029),url("../media/3.jpg");;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
 
     &__wrapper{
         max-width: 1320px;
@@ -283,7 +286,7 @@ body{
         font-style: italic;
         font-weight: 900;
         line-height: 1.204em;
-        color: #000;
+        color: #fff;
         z-index: 1;
         max-width: 48rem;
     }
@@ -404,10 +407,10 @@ body{
     }
 
     &__button{
-        margin-top: 35rem;
+        margin-top: 1rem;
         margin-bottom: 10rem;
-            border: 2.5px solid red;
-            background-color: red;
+            border: 2.5px solid #fff;
+            background-color: transparent;
             text-align: center;
             letter-spacing: .06em;
             text-transform: uppercase;
@@ -430,7 +433,7 @@ body{
 
 .whyus{
     background-color: black;
-    padding: 15rem 0;
+    padding: 5rem 0;
 
 
     &__wrapper{
@@ -541,8 +544,8 @@ body{
     }
 
     &__button{
-        border: 2.5px solid red;
-        background-color: red;
+        border: 2.5px solid #fff;
+        background-color: transparent;
         text-align: center;
         letter-spacing: .06em;
         text-transform: uppercase;
@@ -597,28 +600,52 @@ body{
     }
 
     &__button{
-        background-color: red;
-        border-color: red;
-        color: #fff;
+        border: 2.5px solid #000;
+        background-color: transparent;
+        text-align: center;
+        color: #000;
+        letter-spacing: .06em;
+        text-transform: uppercase;
+        transform-style: preserve-3d;
+        justify-content: center;
+        padding: 2rem 4rem;
+        font-style: italic;
+        font-weight: 900;
+        line-height: 1.111em;
+        text-decoration: none;
+        cursor: pointer;
+        transition: border-color .3s, background-color .3s, transform .3s, color .3s;
     }
 }
 
 .visitus{
     padding: 10rem 0;
-    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 20% 100%, 18% 88%, 0 88%);
+    // clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 20% 100%, 18% 88%, 0 88%);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: linear-gradient(to right, #00000029, #000000c2 56%, #000000db), url("https://cdn.prod.website-files.com/6226481a3123521a0f08ac50/6227dff91457fc6fe16c1d76_cta-bg-image-autocar-webflow-ecommerce-template.jpg");
+    background-image: linear-gradient(to right, #00000029, #000000c2 56%, #000000db), url("../media/3.jpg");
 
     &__title{
         color: white;
     }
 
     &__button{
-        background-color: red;
-        color: white;
-        border: none;
+        border: 2.5px solid #fff;
+        background-color: transparent;
+        text-align: center;
+        color: #fff;
+        letter-spacing: .06em;
+        text-transform: uppercase;
+        transform-style: preserve-3d;
+        justify-content: center;
+        padding: 2rem 4rem;
+        font-style: italic;
+        font-weight: 900;
+        line-height: 1.111em;
+        text-decoration: none;
+        cursor: pointer;
+        transition: border-color .3s, background-color .3s, transform .3s, color .3s;
     }
 
 
@@ -630,7 +657,7 @@ body{
 
 
 .locations{
-    padding: 10rem 0;
+    padding: 3rem 0;
 
 
     &__content{
@@ -699,7 +726,7 @@ body{
         transform: translate(-50%, -50%);
         height: 200px;
         padding: 2rem;
-        background-color: red;
+        background-color: #000;
         display: flex;
         justify-content: space-around;
         align-items: center;
@@ -1322,3 +1349,103 @@ body{
     }
 
 }
+
+
+
+.slider-servises{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+
+.slider {
+    --value: 50%;
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    color: #000000;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    aspect-ratio: 1/1;
+  }
+  
+  .slider__img {
+    position: absolute;
+    top: 0;
+    max-width: none;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .slider__img--before {
+    left: 0;
+    width: var(--value);
+    border-right: 2px solid #000000;
+    object-position: left;
+  }
+  
+  .slider__img--after {
+    right: 0;
+    width: calc(100% - var(--value));
+    border-left: 2px solid #000000;
+    object-position: right;
+  }
+  
+  .slider__range-js::-moz-range-thumb {
+    width: 50px;
+    height: 50px;
+    background-color: currentColor;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border-radius: 50%;
+    transform: translateX(calc(var(--value) - 50%));
+    appearance: none;
+    opacity: 0;
+  }
+  
+  .slider__range-js::-webkit-slider-thumb {
+    width: 50px;
+    opacity: 0;
+    height: 50px;
+    background-color: currentColor;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border-radius: 50%;
+    transform: translateX(calc(var(--value) - 50%));
+    -webkit-appearance: none;
+    appearance: none;
+  }
+  
+  .slider__range-js {
+    position: absolute;
+    margin: 0;
+    background-color: transparent;
+    outline: 0;
+    cursor: col-resize;
+    -webkit-appearance: none;
+    appearance: none;
+    inset: 0;
+  }
+  
+  .slider__range-js:hover {
+    color: #4f4f4f;
+  }
+  
+  .slider__range-js:active {
+    color: #888888;
+  }
+  
+  .slider__range-js:focus-visible::-moz-range-thumb {
+    outline: auto;
+  }
+  
+  .slider__range-js:focus-visible::-webkit-slider-thumb {
+    outline: auto;
+  }

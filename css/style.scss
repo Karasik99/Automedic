@@ -886,9 +886,8 @@ body{
 
     &__menu{
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
-
     }
 
     &__item a{
@@ -909,7 +908,7 @@ body{
 
     &__content{
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
     }
 
@@ -928,6 +927,16 @@ body{
         justify-content: center;
         align-items: center;
         gap: 1rem;
+    }
+
+    &__link{
+        letter-spacing: .05em;
+        text-transform: uppercase;
+        font-size: clamp(.8rem,1.2vw,1.22rem);
+        font-style: italic;
+        font-weight: 900;
+        line-height: 1.429em;
+        color: #fff;
     }
 }
 

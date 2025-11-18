@@ -218,7 +218,7 @@ body{
         padding: 0 2rem;
         display: flex;
         gap: 2rem;
-        max-width: 2000px;
+        max-width: 2300px;
     }
 
     &__container{
@@ -293,7 +293,7 @@ body{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        align-items: center;
+        align-items: flex-start;
     }
 
     &__title{
@@ -1117,7 +1117,7 @@ body{
     --value: 50%;
     position: relative;
     width: 100%;
-    max-width: 400px;
+    max-width: 430px;
     color: #000000;
     background-color: #ffffff;
     border: 1px solid #000000;
@@ -1303,7 +1303,7 @@ body{
     }
 }
 
-@media (max-width:1300px) {
+@media (max-width:1420px) {
     .services__wrapper{
         flex-direction: column;
     }

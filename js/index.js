@@ -38,7 +38,7 @@ BODY.addEventListener('click', HideMenu)
 BODY.addEventListener('click', CloseMenu)
 CROSS.addEventListener('click', CloseMenu)
 GREATBTN.addEventListener('click', Сlosegreat)
-// BURGER.addEventListener('click', Burgermenu)
+BURGER.addEventListener('click', Burgermenu)
 // BUTTONS.addEventListener('click', Slader)
 FORM.addEventListener('submit',((event)=>{Submit(event)}))
 
